@@ -34,7 +34,7 @@ def gradFunReg(theta, X, y, lambda2):
     t = npy.asarray(theta).reshape(theta.shape[0], 1)
     t[0] = 0
     m = X.shape[0]
-    grad = grad = 1 / m * npy.dot(X.T, Logistic.sigmoid(npy.dot(X, theta)).reshape(X.shape[0], 1) - y).reshape(X.shape[1], 1) + (
+    grad = grad - 1 / m * npy.dot(X.T, Logistic.sigmoid(npy.dot(X, theta)).reshape(X.shape[0], 1) - y).reshape(X.shape[1], 1) + (
             lambda2 / m * t)
     return grad
 
