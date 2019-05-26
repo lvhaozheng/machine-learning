@@ -32,7 +32,6 @@ def costFunction(theta,X,y,l):
     reg = (thetaReg @ thetaReg) * l / (2 * len(X))
     return np.mean(first) + reg
 
-
 def gradFunction(theta,X,y,l):
     '''
     :param theta: weight
@@ -77,12 +76,15 @@ def predict(thetaAll,x):
     return h_max
 
 if __name__== "__main__":
-    X,y=loadData('ex3data1.mat')
+    X,y=loadData('data/ex3data1.mat')
     y=y.ravel()
     x = np.c_[np.ones(X.shape[0]), X]
+    print(y.shape)
+    print(X.shape)
     plotImages(X);
     print(X,y)
     thetaAll = oneVsAll(x, y, 1, 10)
+    # print(thetaAll.shape)
     y_predict = predict(thetaAll, x)
     report = classification_report(y_predict, y)
     print(report)

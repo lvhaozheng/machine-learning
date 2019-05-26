@@ -54,7 +54,7 @@ def gradFun(theta, X, y):
 
 
 if __name__ == "__main__":
-    dataMat=loadDataSet('Logistic/ex2data1.txt')
+    dataMat=loadDataSet("data/ex2data1.txt")
     X=dataMat[:,:-1]
     Y=dataMat[:,-1:]
     X_shape = npy.shape(X)

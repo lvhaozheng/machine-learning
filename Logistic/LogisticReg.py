@@ -54,7 +54,7 @@ def mapFeature(x1, x2):
 
 
 if __name__ == "__main__":
-    dataMat=Logistic.loadDataSet('ex2data2.txt')
+    dataMat=Logistic.loadDataSet('data/ex2data2.txt')
     X = dataMat[:, :-1]
     Y = dataMat[:, -1:]
     X_shape = npy.shape(X)
